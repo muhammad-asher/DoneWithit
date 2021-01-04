@@ -1,34 +1,23 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Button, Text,StyleSheet, Alert, SafeAreaView } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 
 export default function App() {
 	return (
-		<SafeAreaView style={styles.container}>
-			<Text>Hello React </Text>
-			<Button
-				title="Click me"
-				onPress={() =>
-					Alert.alert("Title Rn", "My message", [
-						{
-							text: "Yes",
-						},
-						{
-							text: "No",
-						},
-					])
-				}
+		<View
+			style={{
+				backgroundColor: "#fff",
+				flex: 1,
+				flexDirection: "row",
+				justifyContent: "center",
+				alignItems: "center",
+			}}
+		>
+			<View
+				style={{ backgroundColor: "dodgerblue", width: 100, height: 100 }}
 			/>
-			<StatusBar style="auto" />
-		</SafeAreaView>
+			<View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
+			<View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
+		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});
