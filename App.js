@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState } from "react";
 import { Text, StyleSheet, View, TextInput } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppText from "./app/components/AppText";
@@ -17,9 +17,17 @@ const catagories = [
 	{ label: "Cameras", value: 3 },
 ];
 export default function App() {
+	const [Category, setCategory] = useState();
+
 	return (
 		<Screen>
-			<AppPicker items={catagories} placeholder="Category" icon="apps" />
+			<AppPicker
+				selectedItem={Category}
+				onSelectItem={(item) => setCategory(item)}
+				items={catagories}
+				placeholder="Category"
+				icon="apps"
+			/>
 			<AppTextInput placeholder="Email" icon="email" />
 		</Screen>
 	);
