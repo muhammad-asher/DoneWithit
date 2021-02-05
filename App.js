@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Screen from "./app/components/Screen";
 import AppTextInput from "./app/components/AppTextInput";
