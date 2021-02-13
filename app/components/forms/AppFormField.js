@@ -8,7 +8,6 @@ function AppFormField({ name, ...otherProps }) {
 		<>
 			<AppTextInput
 				placeholder="Email"
-				icon="email"
 				autoCapitalize="none"
 				onChangeText={handleChange(name)}
 				onBlur={() => setFieldTouched(name)}
