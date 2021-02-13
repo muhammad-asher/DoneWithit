@@ -14,13 +14,20 @@ import AppText from "./AppText";
 import { TouchableWithoutFeedback } from "react-native";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
-function AppPicker({ icon, items, placeholder, selectedItem, onSelectItem }) {
+function AppPicker({
+	icon,
+	items,
+	placeholder,
+	selectedItem,
+	onSelectItem,
+	width = "100%",
+}) {
 	const [modalVisible, setmodalVisible] = useState(false);
 
 	return (
 		<React.Fragment>
 			<TouchableWithoutFeedback onPress={() => setmodalVisible(true)}>
-				<View style={styles.container}>
+				<View style={[styles.container,{width}]}>
 					{icon && (
 						<MaterialCommunityIcons
 							name={icon}

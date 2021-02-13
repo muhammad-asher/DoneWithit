@@ -8,14 +8,14 @@ import Screen from "../components/Screen";
 const initialMessages = [
 	{
 		id: 1,
-		title: "T1",
-		description: "D1",
+		title: "T1shyjfgvjhcxdgdhjhjvhgtfhgjkhkbjhy7567i9798tyfddgvh",
+		description: "D1yufgklohgftr7i7r6547tguvxtrutiy9t7fycfjjkjk..,nvy",
 		image: require("../assets/asher.png"),
 	},
 	{
 		id: 2,
-		title: "T2",
-		description: "D2",
+		title: "T2tasyhdjfgkhlj;k;kmjnhbgdsdfjgkhjljnhbjvcdfgjhkjhigyyfgh",
+		description: "D2xhj,kjcxdhfjgkhkgvjhcdfgjkhjhgvfdhfjkhgjvhcdfhgjk",
 		image: require("../assets/asher.png"),
 	},
 ];
