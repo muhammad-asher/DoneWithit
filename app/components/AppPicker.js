@@ -18,6 +18,8 @@ function AppPicker({
 	icon,
 	items,
 	placeholder,
+	numberOfColumns=1,
+	PickerItemComponent = PickerItem,
 	selectedItem,
 	onSelectItem,
 	width = "100%",
@@ -27,7 +29,7 @@ function AppPicker({
 	return (
 		<React.Fragment>
 			<TouchableWithoutFeedback onPress={() => setmodalVisible(true)}>
-				<View style={[styles.container,{width}]}>
+				<View style={[styles.container, { width }]}>
 					{icon && (
 						<MaterialCommunityIcons
 							name={icon}
@@ -53,8 +55,10 @@ function AppPicker({
 					<FlatList
 						data={items}
 						keyExtractor={(item) => item.value.toString()}
+						numColumns={numberOfColumns}
 						renderItem={({ item }) => (
-							<PickerItem
+							<PickerItemComponent
+								item={item}
 								label={item.label}
 								onPress={() => {
 									setmodalVisible(false);
