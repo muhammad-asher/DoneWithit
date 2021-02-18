@@ -18,7 +18,7 @@ function AppPicker({
 	icon,
 	items,
 	placeholder,
-	numberOfColumns=1,
+	numberOfColumns = 1,
 	PickerItemComponent = PickerItem,
 	selectedItem,
 	onSelectItem,
