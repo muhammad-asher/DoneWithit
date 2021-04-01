@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import AppNavigator from "./app/navigation/AppNavigator";
 import navigationTheme from "./app/navigation/navigationTheme";
 import firebase from "firebase";
+import LoginScreen from "./app/screens/LoginScreen";
 import { firebaseConfig } from "./app/config/key";
 export default function App() {
 	const [user, setUser] = useState(null);
@@ -19,7 +19,7 @@ export default function App() {
 
 	return (
 		<NavigationContainer theme={navigationTheme}>
-			<AppNavigator />
+			<LoginScreen />
 		</NavigationContainer>
 	);
 }
